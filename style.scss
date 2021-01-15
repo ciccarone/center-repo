@@ -1,0 +1,137 @@
+$c-green: #92c0a8;
+$c-blue: #5b7fc1;
+$c-offwhite: #f6f7e7;
+$max-width: 1040px;
+
+.section-class {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.other {
+  background-color: $c-offwhite;
+  color: $c-blue;
+  @extend .section-class;
+  &__title {
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-family: 'commuters_sansheavy', sans-serif;
+    color: $c-blue;
+  }
+  &__blurb {
+    max-width: $max-width;
+    margin: 0 auto;
+    font-family: 'ivymodelight', serif !important;
+    letter-spacing: 2px;
+    font-size: 1.25em;
+    color: $c-blue !important;
+    @media (max-width: $max-width) {
+      padding: 1em;
+    }
+  }
+  border-bottom: 1px solid $c-blue;
+}
+
+.opener {
+  background-color: $c-blue;
+  color: $c-offwhite;
+  @extend .section-class;
+
+  &__blurb {
+    max-width: $max-width;
+    margin: 0 auto;
+    font-family: 'ivymodelight', serif !important;
+    letter-spacing: 2px;
+    font-size: 1.25em;
+    color: $c-offwhite !important;
+    @media (max-width: $max-width) {
+      padding: 1em;
+    }
+  }
+
+  &__title {
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-family: 'commuters_sansheavy', sans-serif;
+    color: $c-offwhite;
+  }
+}
+
+.program {
+  background-color: $c-offwhite;
+  color: $c-blue;
+  cursor: pointer;
+  padding: 3em 0;
+  border-bottom: 1px solid $c-blue;
+
+  &:hover {
+    background-color: $c-green !important;
+  }
+
+  &__inner {
+    display: flex;
+    max-width: $max-width;
+
+    @media (max-width: 1140px) {
+      max-width: 960px;
+    }
+    @media (max-width: 960px) {
+      max-width: 600px;
+    }
+    @media (max-width: 600px) {
+      max-width: 400px;
+    }
+    margin: 0 auto;
+  }
+
+  &__icon {
+    position: relative;
+    top: 25px;
+    left: -66px;
+    @media (max-width: 1140px) {
+      left: -10px;
+    }
+    @media (max-width: 600px) {
+      margin-left: 15px;
+    }
+
+    &:before {
+      font-family: "Font Awesome 5 Pro";
+      content: "\f067";
+      display: block;
+    }
+
+  }
+
+  &__title {
+    font-size: 3em;
+    font-family: 'commuters_sansheavy', sans-serif;
+  }
+
+  &__blurb {
+    display: none;
+    font-family: 'ivymodelight', serif !important;
+    letter-spacing: 2px;
+  }
+
+  &.active {
+    color: $c-offwhite !important;
+    background-color: #e3b94b;
+    .program__blurb {
+      display: block;
+      color: $c-offwhite !important;
+    }
+    .program__title {
+      color: $c-offwhite !important;
+    }
+
+    .program__icon:before {
+      content: "\f068";
+      color: $c-offwhite !important;
+    }
+  }
+}

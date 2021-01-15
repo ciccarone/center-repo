@@ -1,0 +1,135 @@
+@charset "UTF-8";
+.section-class, .opener, .other {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.other {
+  background-color: #f6f7e7;
+  color: #5b7fc1;
+  border-bottom: 1px solid #5b7fc1;
+}
+.other__title {
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "commuters_sansheavy", sans-serif;
+  color: #5b7fc1;
+}
+.other__blurb {
+  max-width: 1040px;
+  margin: 0 auto;
+  font-family: "ivymodelight", serif !important;
+  letter-spacing: 2px;
+  font-size: 1.25em;
+  color: #5b7fc1 !important;
+}
+@media (max-width: 1040px) {
+  .other__blurb {
+    padding: 1em;
+  }
+}
+
+.opener {
+  background-color: #5b7fc1;
+  color: #f6f7e7;
+}
+.opener__blurb {
+  max-width: 1040px;
+  margin: 0 auto;
+  font-family: "ivymodelight", serif !important;
+  letter-spacing: 2px;
+  font-size: 1.25em;
+  color: #f6f7e7 !important;
+}
+@media (max-width: 1040px) {
+  .opener__blurb {
+    padding: 1em;
+  }
+}
+.opener__title {
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "commuters_sansheavy", sans-serif;
+  color: #f6f7e7;
+}
+
+.program {
+  background-color: #f6f7e7;
+  color: #5b7fc1;
+  cursor: pointer;
+  padding: 3em 0;
+  border-bottom: 1px solid #5b7fc1;
+}
+.program:hover {
+  background-color: #92c0a8 !important;
+}
+.program__inner {
+  display: flex;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+@media (max-width: 1140px) {
+  .program__inner {
+    max-width: 960px;
+  }
+}
+@media (max-width: 960px) {
+  .program__inner {
+    max-width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  .program__inner {
+    max-width: 400px;
+  }
+}
+.program__icon {
+  position: relative;
+  top: 25px;
+  left: -66px;
+}
+@media (max-width: 1140px) {
+  .program__icon {
+    left: -10px;
+  }
+}
+@media (max-width: 600px) {
+  .program__icon {
+    margin-left: 15px;
+  }
+}
+.program__icon:before {
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+  display: block;
+}
+.program__title {
+  font-size: 3em;
+  font-family: "commuters_sansheavy", sans-serif;
+}
+.program__blurb {
+  display: none;
+  font-family: "ivymodelight", serif !important;
+  letter-spacing: 2px;
+}
+.program.active {
+  color: #f6f7e7 !important;
+  background-color: #e3b94b;
+}
+.program.active .program__blurb {
+  display: block;
+  color: #f6f7e7 !important;
+}
+.program.active .program__title {
+  color: #f6f7e7 !important;
+}
+.program.active .program__icon:before {
+  content: "";
+  color: #f6f7e7 !important;
+}
+
+/*# sourceMappingURL=style.css.map */
